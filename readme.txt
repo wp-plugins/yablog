@@ -4,7 +4,7 @@ Donate link: http://paramonovav.com/
 Tags: xmlrpc, emoji, generator, feeds, global
 Requires at least: 3.5
 Tested up to: 4.2
-Stable tag: trunk
+Stable tag: 1.5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,7 +30,7 @@ Also you may disable new emoji functionality in WordPress 4.2. and disable and r
 
 There are two easy methods for checking if XML-RPC is off. First, try using an XML-RPC client, like the official WordPress mobile apps. Or you can try the XML-RPC Validator, written by Danilo Ercoli of the Automattic Mobile Team - the tool is available at [http://xmlrpc.eritreo.it/](http://xmlrpc.eritreo.it/) with a blog post about it at [http://daniloercoli.com/2012/05/15/wordpress-xml-rpc-endpoint-validator/](http://daniloercoli.com/2012/05/15/wordpress-xml-rpc-endpoint-validator/).
 
- == Screenshots ==
+== Screenshots ==
 
 == Changelog ==
 
