@@ -1,22 +1,34 @@
 === Plugin Name ===
 Contributors: antonparamonov
-Donate link: http://paramonovav.com/
-Tags: xmlrpc, emoji, generator, feeds, global
+Donate link: http://blog.paramonovav.com/en/plugins/plugins-for-wordpress/
+Author: Anton Paramonov
+Author URI: http://paramonovav.com/
+Tags: xmlrpc, emoji, generator, feeds, global, security, wlwmanifest, pingback, rsd, shortlink
 Requires at least: 3.5
 Tested up to: 4.2
-Stable tag: trunk
+Stable tag: 1.6.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Allows administrators to globally disable XML-RPC, new emoji functionality in WordPress 4.2, wp generator and feeds on their site.
+Allows administrators to globally disable XML-RPC, new emoji functionality in WordPress 4.2, wp generator, wlwmanifest, RSD EditURI and rss/feeds on their site.
 
 == Description ==
 
-Pretty simply, this plugin disables the XML-RPC API on a WordPress site running 3.5 or above.
+Pretty simple plugin for disable:
 
-Beginning in 3.5, XML-RPC is enabled by default. Additionally, the option to disable/enable XML-RPC was removed. For various reasons, site owners may wish to disable this functionality. This plugin provides an easy way to do so.
+*	the XML-RPC on a WordPress site running 3.5 or above
+*	new emoji functionality in WordPress 4.2
+*	Posts and Comments general feeds
 
-Also you may disable new emoji functionality in WordPress 4.2. and disable and remove from html links to the general feeds: Post and Comment Feed, and links to the extra feeds such as category feeds.
+And remove:
+
+*	Wordpress genarator meta tag from HTML source page
+*	link to wlwmanifest file from HTML source page (Windows Live Writer)
+*	link to RSD EditURI from HTML source page
+*	X-Pingback from HTTP headers and pingback_url in HTML source page
+*	shortlink from HTTP headers and HTML source page
+
+Translated on English, Russian and Ukraine languages.
 
 == Installation ==
 
@@ -36,10 +48,17 @@ There are two easy methods for checking if XML-RPC is off. First, try using an X
 
 == Changelog ==
 
+= 1.6.4 =
+* new translation on Russian and Ukraine languages
+* more settings
+
 = 1.5.0 =
 * Initial release
 
 == Upgrade Notice ==
 
+= 1.6.4 =
+new translation on Russian and Ukraine languages and more options and settings
+
 = 1.5.0 =
-* Initial release
+Initial release

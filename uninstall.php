@@ -10,7 +10,8 @@
         'yablog_disable_wp_generator',
         'yablog_disable_emoji',
         'yablog_disable_wlwmanifest',
-        'yablog_disable_feed'
+        'yablog_disable_feed',
+        'yablog_options'
     );
 
     foreach ($opts as $opt_key)

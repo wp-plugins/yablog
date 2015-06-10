@@ -1,0 +1,135 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: YaBlog\n"
+"POT-Creation-Date: 2015-06-10 00:16+0200\n"
+"PO-Revision-Date: 2015-06-10 00:31+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: yablog.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: uk_UA\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: settings_page.php:4
+msgid "Disable XML-RPC"
+msgstr "Вимкнути XML-RPC"
+
+#: settings_page.php:5
+msgid "Disable XML-RPC API in WordPress 3.5+."
+msgstr "Вимкнути XML-RPC API у WordPress 3.5 +."
+
+#: settings_page.php:8
+msgid "Disable emoji"
+msgstr "Вимкнути emoji"
+
+#: settings_page.php:9
+msgid "Disable the new emoji functionality in WordPress 4.2"
+msgstr "Відключити нову функціональність emoji в WordPress 4.2"
+
+#: settings_page.php:12
+msgid "Disable all feeds"
+msgstr "Вимкнути всі канали"
+
+#: settings_page.php:13
+msgid ""
+"Disable and remove from html links to the general feeds: Post and Comment "
+"Feed, and links to the extra feeds such as category feeds."
+msgstr ""
+"Відключити і видалити з html посилання на загальні канали: пост і годувати "
+"коментарі та посилання на додаткові канали, такі як Категорія канали."
+
+#: settings_page.php:18
+msgid "Remove html meta tag generator"
+msgstr "Видалити html мета тег generator"
+
+#: settings_page.php:19
+msgid "<meta name=\"generator\" content=\"WordPress 4.2.2\" />"
+msgstr "<meta name=“generator” content=“WordPress 4.2.2”>"
+
+#: settings_page.php:22
+msgid "Remove wlwmanifest"
+msgstr "Видалити wlwmanifest"
+
+#: settings_page.php:23
+msgid ""
+"<link rel=\"wlwmanifest\" type=\"application/wlwmanifest+xml\" href=\"/wp-"
+"includes/wlwmanifest.xml\" />"
+msgstr ""
+"<link rel=“wlwmanifest” type=“application/wlwmanifest+xml” href=“/wp-"
+"includes/wlwmanifest.xml”>"
+
+#: settings_page.php:26
+msgid "Remove shortlink"
+msgstr "Видалити shortlink"
+
+#: settings_page.php:27
+#, php-format
+msgid "Remove \"Link:<%s/>; rel=shortlink\" from HTTP header"
+msgstr "Видалити “Link:<%s/>; rel=shortlink “ з HTTP заголовку"
+
+#: settings_page.php:33 yablog.php:47 yablog.php:55
+msgid "Settings"
+msgstr "Налаштування"
+
+#: settings_page.php:36
+msgid "Disable"
+msgstr "Вимкнути"
+
+#: settings_page.php:50 settings_page.php:59
+msgid "Remove"
+msgstr "Видалити"
+
+#: settings_page.php:66
+msgid "Save Changes"
+msgstr "Зберегти зміни"
+
+#: yablog.php:83
+#, php-format
+msgid "No feed available, please visit our <a href=\"%s\">Home page</a>!"
+msgstr ""
+"Немає доступних, канал, будь ласка, відвідайте нашу <a href=“%s”>домашню "
+"сторінку</a>!"
+
+#: yablog.php:126
+msgid "Pingback functionality is disabled on this Blog."
+msgstr "Pingback функціональність вимкнуто на цьому блозі."
+
+#: yablog.php:127
+msgid "Pingback Disabled!"
+msgstr "Pingback вимкнуто!"
+
+#. Plugin Name of the plugin/theme
+msgid "YaBlog"
+msgstr "YaBlog"
+
+#. Plugin URI of the plugin/theme
+msgid "https://wordpress.org/plugins/yablog/"
+msgstr "https://wordpress.org/plugins/yablog/"
+
+#. Description of the plugin/theme
+msgid ""
+"Allows administrators to globally disable XML-RPC, new emoji functionality "
+"in WordPress 4.2, wp generator and feeds on their site."
+msgstr ""
+"Дозволяє адміністраторам глобально відключити XML-RPC, нової "
+"функціональності emoji в WordPress 4.2, wordpress generator і канали на "
+"своєму сайті."
+
+#. Author of the plugin/theme
+msgid "Anton Paramonov"
+msgstr "Антон Парамонов"
+
+#. Author URI of the plugin/theme
+msgid "http://paramonovav.com/"
+msgstr "http://paramonovav.com/"
