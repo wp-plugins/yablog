@@ -3,7 +3,7 @@
 Plugin Name: YaBlog
 Plugin URI: https://wordpress.org/plugins/yablog/
 Description: Allows administrators to globally disable XML-RPC, new emoji functionality in WordPress 4.2, wp generator and feeds on their site.
-Version: 1.6.4
+Version: 1.6.5
 Author: Anton Paramonov
 Author URI: http://paramonovav.com/
 Donate link: http://blog.paramonovav.com/en/plugins/plugins-for-wordpress/
@@ -120,38 +120,37 @@ function yablog_action_init()
 		add_filter('option_enable_xmlrpc', '__return_state_false');
 
 		// Just disable pingback.ping functionality while leaving XMLRPC intact?
-		add_action('xmlrpc_call', function($method){
-    		if($method != 'pingback.ping') return;
-    		wp_die(
-        		__('Pingback functionality is disabled on this Blog.', 'yablog'),
-        		__('Pingback Disabled!', 'yablog'),
-        		array('response' => 403, 'back_link' => 'http://blog.paramonovav.com/en/plugins/plugins-for-wordpress/')
-    		);
-		});
+		add_action('xmlrpc_call', 'yablog_xmlrpc_call');
 
-		remove_action('wp_head', 'rsd_link');//<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blog.paramonovav.com/xmlrpc.php?rsd" />
+		//<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+		remove_action('wp_head', 'rsd_link');
 	}
 	
 	if (yablog_get_option('disable_wp_generator'))
 	{
-		remove_action('wp_head', 'wp_generator');//<meta name="generator" content="WordPress 4.2.2" />
+		//<meta name="generator" content="WordPress 4.2.2" />
+		remove_action('wp_head', 'wp_generator');
 	}
 	if (yablog_get_option('disable_wlwmanifest'))
 	{
 		//Windows Live Writer
-		remove_action('wp_head', 'wlwmanifest_link');//<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://blog.paramonovav.com/wp-includes/wlwmanifest.xml" /> 
+		//<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+		remove_action('wp_head', 'wlwmanifest_link');
 	}
 	
 	if (yablog_get_option('disable_emoji'))
 	{
-		remove_action('wp_head', 'print_emoji_detection_script', 7);//_wpemojiSettings
+		//_wpemojiSettings
+		remove_action('wp_head', 'print_emoji_detection_script', 7);
 		remove_action('wp_print_styles', 'print_emoji_styles');	
 	}
 	
 	if (yablog_get_option('disable_feed'))
 	{
-		remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
-		remove_action('wp_head', 'feed_links', 2); // Display the links to the general feeds: Post and Comment Feed
+		// Display the links to the extra feeds such as category feeds
+		remove_action('wp_head', 'feed_links_extra', 3);
+		// Display the links to the general feeds: Post and Comment Feed
+		remove_action('wp_head', 'feed_links', 2);
 
 		add_action('do_feed', 'yablog_disable_feed', 1);
 		add_action('do_feed_rdf', 'yablog_disable_feed', 1);
@@ -172,6 +171,20 @@ function yablog_action_init()
 function __return_state_false($state)
 {
 	return FALSE;
+}
+
+function yablog_xmlrpc_call($method)
+{
+	if($method != 'pingback.ping')
+	{
+		return;
+	}
+
+	wp_die(
+		__('Pingback functionality is disabled on this Blog.', 'yablog'),
+		__('Pingback Disabled!', 'yablog'),
+		array('response' => 403, 'back_link' => get_bloginfo('url'))
+	);
 }
 
 function yablog_filter_bloginfo_url_remove_pingback_url( $output, $show )

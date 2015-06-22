@@ -6,7 +6,7 @@ Author URI: http://paramonovav.com/
 Tags: xmlrpc, emoji, generator, feeds, global, security, wlwmanifest, pingback, rsd, shortlink
 Requires at least: 3.5
 Tested up to: 4.2
-Stable tag: 1.6.4
+Stable tag: 1.6.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,6 +47,9 @@ There are two easy methods for checking if XML-RPC is off. First, try using an X
 1. YaBlog Plugin Settings
 
 == Changelog ==
+
+= 1.6.5 =
+* Compatible with php 5.x
 
 = 1.6.4 =
 * new translation on Russian and Ukraine languages
